@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="APimage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="700.0" style="-fx-background-color: #20120F; -fx-border-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientgui.LoginController">
+   <children>
+      <ImageView fx:id="IWimage" fitHeight="308.0" fitWidth="357.0" layoutX="23.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.jpg" />
+         </image>
+         <effect>
+            <DropShadow color="#f8f6f6" />
+         </effect>
+      </ImageView>
+      <AnchorPane fx:id="APlogin" layoutX="420.0" layoutY="37.0" prefHeight="268.0" prefWidth="248.0" style="-fx-background-color: #9C2827;">
+         <children>
+            <JFXTextField fx:id="userField" focusColor="#3cc656" layoutX="54.0" layoutY="100.0" promptText="Username" stylesheets="@Client.css" unFocusColor="#c3b7b7">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordField" focusColor="#3cc656" layoutX="54.0" layoutY="149.0" promptText="Password" stylesheets="@Client.css" unFocusColor="#c3b7b7">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </JFXPasswordField>
+            <Label fx:id="LabelSignIn" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="37.0" prefHeight="41.0" prefWidth="141.0" style="-fx-background-color: brown;" text="Sign In" textFill="#dacbcb">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="31.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#8d8d8d" height="63.5" offsetY="3.0" radius="28.9725" spread="0.2" width="54.39" />
+               </effect>
+            </Label>
+            <JFXButton fx:id="ButtonSignIn" layoutX="84.0" layoutY="213.0" onAction="#loginButtonChangeScene" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: brown; -fx-border-color: darkred;" text="Sign In" textFill="#dacbcb">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="33.0" text="IP: " textFill="WHITE">
+         <font>
+            <Font name="Bodoni 72 Bold" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="ipAddress" focusColor="WHITE" layoutX="68.0" layoutY="3.0" prefHeight="27.0" prefWidth="141.0" promptText="123.123..." stylesheets="@Client.css" unFocusColor="#fffbfb" />
+   </children>
+</AnchorPane>
